@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger King Coin - Official $TIGERKING on Solana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Title Font */
+        @font-face {
+            font-family: 'MPINo507';
+            src: url('https://cdn.jsdelivr.net/gh/toigerwoids/tigerking-fonts/MPINo507.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --poster-orange: #FF6B00;
+            --poster-yellow: #FFA500;
+            --poster-light-orange: #FFB84D;
+            --poster-cream: #FFF3E0;
+            --poster-red: #FF4500;
+            --poster-dark-red: #CC3300;
+            --text-white: #FFFFFF;
+            --text-cream: #FFFAF0;
+            --bg-dark: #1A0F08;
+            --bg-medium: #2C1810;
+            --bg-light: #FFF5EE;
+            --america-blue: #002868;
+            --america-red: #BF0A30;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--poster-dark-red);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Clean section transitions */
+
+        /* Section Background Colors */
+        .section-light {
+            background: var(--poster-cream);
+            color: var(--poster-dark-red);
+        }
+
+        .section-dark {
+            background: var(--bg-medium);
+            color: var(--text-cream);
+        }
+
+        .section-dark .section-title {
+            color: var(--poster-orange);
+        }
+
+        .section-dark p {
+            color: var(--text-cream);
+        }
+
+        .section-dark .token-card {
+            background: rgba(255, 107, 0, 0.1);
+            border-color: var(--poster-orange);
+        }
+
+        .section-dark .token-card h3 {
+            color: var(--poster-orange);
+        }
+
+        .section-dark .token-card p {
+            color: var(--text-cream);
+        }
+
+        .section-dark .token-card:hover {
+            background: var(--poster-orange);
+        }
+
+        .section-dark .token-card:hover h3,
+        .section-dark .token-card:hover p {
+            color: var(--text-white);
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--poster-orange);
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: 
+                linear-gradient(180deg, 
+                    rgba(255,107,0,0.4) 0%, 
+                    rgba(255,140,0,0.4) 40%, 
+                    rgba(255,165,0,0.4) 100%),
+                url('https://i.imgur.com/YPCHYPy.jpeg') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'MPINo507', sans-serif;
+            font-size: clamp(10rem, 10vw, 8rem);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #FFF3E0;
+            letter-spacing: -0.02em;
+            font-weight: 400;
+            line-height: 0.9;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            color: #FFF3E0;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        .hero-subtitle.tagline {
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 40px;
+            text-transform: none;
+            line-height: 1.4;
+            color: #FFF3E0;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--text-white);
+            color: var(--poster-orange);
+            border: 3px solid var(--text-white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: var(--poster-cream);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            border: 3px solid var(--text-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--text-white);
+            color: var(--poster-orange);
+            transform: translateY(-2px);
+        }
+
+        .btn-community {
+            background: var(--poster-orange);
+            color: var(--text-white);
+            border: 3px solid var(--poster-orange);
+        }
+
+        .btn-community:hover {
+            background: var(--poster-red);
+            border-color: var(--poster-red);
+            transform: translateY(-2px);
+        }
+
+        .btn-freedom {
+            background: var(--america-red);
+            color: var(--text-white);
+            border: 3px solid var(--america-red);
+        }
+
+        .btn-freedom:hover {
+            background: var(--america-blue);
+            border-color: var(--america-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'MPINo507', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            color: var(--poster-orange);
+            letter-spacing: -0.02em;
+            line-height: 0.9;
+            font-weight: 400;          
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--poster-orange);
+            border-radius: 0;
+        }
+
+        /* About Section - Now Dark */
+        .about {
+            background: var(--bg-medium);
+            color: var(--text-cream);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-cream);
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            position: relative;
+            aspect-ratio: 4/3;
+            background: var(--poster-cream);
+            border: 4px solid var(--poster-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--poster-orange);
+            background-image: url('https://i.imgur.com/vopkpaQ.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .highlight {
+            color: var(--poster-orange);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Tokenomics - Light */
+        .tokenomics {
+            background: var(--poster-cream);
+            position: relative;
+        }
+
+        .token-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .token-card {
+            background: var(--text-white);
+            border: 3px solid var(--poster-orange);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .token-card:hover {
+            transform: translateY(-5px);
+            background: var(--poster-light-orange);
+            color: var(--text-white);
+        }
+
+        .token-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .token-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--poster-orange);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 800;
+        }
+
+        .token-card p {
+            color: var(--poster-dark-red);
+        }
+
+        .token-card:hover h3,
+        .token-card:hover p {
+            color: var(--text-white);
+        }
+
+        /* Community Section - Keep Dark with Image */
+        .community {
+            background: 
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://i.imgur.com/T6oijrS.jpeg') center/cover no-repeat;
+            color: var(--text-white);
+            position: relative;
+        }
+
+        .community .section-title {
+            color: var(--text-white);
+        }
+
+        .community .section-title::after {
+            background: var(--text-white);
+        }
+
+        .community-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .community-cta {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Memes Section - Now Light */
+        .memes {
+            background: var(--poster-cream);
+            position: relative;
+        }
+
+        .memes-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .meme-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* force 3 per row */
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .meme-img-wrapper {
+            aspect-ratio: 1;
+            background: var(--text-white);
+            border: 4px solid var(--poster-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .meme-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .meme-img-wrapper:hover {
+            transform: scale(1.05);
+            border-color: var(--poster-red);
+        }
+
+        .meme-placeholder {
+            aspect-ratio: 1;
+            background: var(--text-white);
+            border: 4px solid var(--poster-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--poster-orange);
+            transition: all 0.3s ease;
+        }
+
+        .meme-placeholder:hover {
+            transform: scale(1.05);
+            background: var(--poster-light-orange);
+            color: var(--text-white);
+        }
+
+        .hashtag {
+            font-family: 'MPINo507', sans-serif;
+            font-size: 3rem;
+            color: var(--poster-orange);
+            text-transform: uppercase;
+            margin: 30px 0;
+        }
+
+        /* Freedom Section - Keep as is */
+        .freedom {
+            background: 
+                linear-gradient(135deg, rgba(0,40,104,0.85) 0%, rgba(191,10,48,0.85) 100%),
+                url('https://i.imgur.com/9BX7N54.jpeg') center/cover no-repeat;
+            color: var(--text-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .freedom .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .freedom .section-title {
+            color: var(--text-white);
+        }
+
+        .freedom .section-title::after {
+            background: var(--text-white);
+        }
+
+        .freedom-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .freedom-hashtag {
+            font-family: 'MPINo507', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--text-white);
+            text-transform: uppercase;
+            margin: 30px 0;
+            letter-spacing: 0.05em;
+        }
+
+        .freedom-link {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border: 3px solid var(--text-white);
+            padding: 20px 40px;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--text-white);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .freedom-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+        }
+
+        /* How to Buy - Now Dark */
+        .how-to-buy {
+            background: var(--bg-medium);
+            color: var(--text-cream);
+            position: relative;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--poster-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-white);
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--poster-orange);
+            font-weight: 800;
+        }
+
+        .step p {
+            color: var(--text-cream);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--poster-orange);
+            padding: 60px 0 40px;
+            text-align: center;
+            color: var(--text-white);
+        }
+
+        .contract {
+            background: var(--text-white);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--poster-orange);
+        }
+
+        .contract:hover {
+            background: var(--poster-cream);
+        }
+
+        .contract-label {
+            font-size: 0.9rem;
+            color: var(--poster-dark-red);
+            margin-bottom: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contract-address {
+            font-family: monospace;
+            font-size: 1.1rem;
+            color: var(--poster-orange);
+            word-break: break-all;
+            font-weight: 700;
+        }
+
+        .copy-feedback {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-white);
+            color: var(--poster-orange);
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            font-weight: 700;
+        }
+
+        .copy-feedback.show {
+            opacity: 1;
+        }
+
+        .social-links {
+            margin: 30px 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--text-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--poster-orange);
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            font-weight: 800;
+        }
+
+        .social-link:hover {
+            background: var(--poster-cream);
+            transform: translateY(-3px);
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            color: var(--text-white);
+            max-width: 600px;
+            margin: 30px auto 0;
+            line-height: 1.6;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-cta, .community-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .meme-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .steps {
+                gap: 60px;
+            }
+
+            .step::after {
+                content: '↓';
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 2rem;
+                color: var(--poster-orange);
+            }
+
+            .step:last-child::after {
+                display: none;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrapper">
+
+    <!-- logo -->
+    <a href="#hero" class="logo">TIGER KING</a>
+
+    <!-- centred nav links -->
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#community">Join&nbsp;the&nbsp;Pride</a>
+      <a href="#memes">Memes</a>
+      <a href="#freedom">Fight&nbsp;for&nbsp;Freedom</a>
+    </nav>
+
+    <!-- buy pill sits on its own so nav can stay perfectly centred -->
+    <a href="#how-to-buy" class="btn btn-buy">BUY</a>
+
+    <!-- mobile hamburger -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <p class="hero-subtitle">A SOLANA OFFICIAL MEMECOIN</p>
+                <h1>Tiger King<br>Coin</h1>
+                <p class="hero-subtitle tagline">
+                    Endorsed by Joe Exotic from prison.<br>
+                    The only official memecoin of the King himself.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://pump.fun" target="_blank" class="btn btn-primary pulse">
+                        <span>🚀</span> Buy on Pump.fun
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <span>📊</span> View Chart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Now Dark -->
+    <section class="about section-dark" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">The King Returns</h2>
+            <div class="about-grid fade-in">
+                <div class="about-content">
+                    <p>
+                        From behind bars to the blockchain, <span class="highlight">Joe Exotic</span> officially endorses the wildest memecoin on Solana.
+                    </p>
+                    <p>
+                        This isn't just another memecoin – it's a movement. A tribute to the audacity, the chaos, and the unfiltered energy that made Tiger King a global phenomenon.
+                    </p>
+                    <p>
+                        <span class="highlight">$TIGERKING</span> roars on pump.fun with the official blessing of the man himself.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <!-- Image now loaded via CSS background -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section - Light -->
+    <section class="tokenomics section-light" id="tokenomics">
+        <div class="container">
+            <h2 class="section-title fade-in">Tokenomics</h2>
+            <div class="token-grid">
+                <div class="token-card fade-in">
+                    <span class="token-icon">🪙</span>
+                    <h3>1 Billion Supply</h3>
+                    <p>Fixed supply. No inflation. Pure scarcity.</p>
+                </div>
+                <div class="token-card fade-in">
+                    <span class="token-icon">🔥</span>
+                    <h3>Liquidity Burnt</h3>
+                    <p>100% liquidity burned. Rug-proof by design.</p>
+                </div>
+                <div class="token-card fade-in">
+                    <span class="token-icon">✅</span>
+                    <h3>Joe Exotic Endorsed</h3>
+                    <p>Written approval from federal prison.</p>
+                </div>
+                <div class="token-card fade-in">
+                    <span class="token-icon">🚀</span>
+                    <h3>Fair Launch</h3>
+                    <p>Launched on pump.fun. No presale. No BS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section - Keep Dark with Image -->
+    <section class="community" id="community">
+        <div class="container">
+            <h2 class="section-title fade-in">Join the Pride</h2>
+            <div class="community-content">
+                <p class="fade-in">
+                    The Tiger King community isn't just holders – we're a pride. A family united by gains, memes, and pure tiger energy. Join our growing pack of wild investors and become part of the most legendary memecoin community on Solana.
+                </p>
+                <div class="community-cta fade-in">
+                    <a href="#" class="btn btn-community">
+                        OFFICIAL X
+                    </a>
+                    <a href="#" class="btn btn-community">
+                        OUR COMMUNITY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memes Section - Now Light -->
+    <section class="memes section-light" id="memes">
+        <div class="container">
+            <h2 class="section-title fade-in">Meme Territory</h2>
+            <div class="memes-content">
+                <p class="fade-in">
+                    Share your wildest Tiger King memes with us on X and become part of the legend.
+                </p>
+                <p class="hashtag fade-in">#TigerKingCoin</p>
+                 <div class="meme-gallery">
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/p6zzA92.jpeg" alt="Meme 1">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/DYa1yhK.jpeg" alt="Meme 2">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/DdzMZjv.png" alt="Meme 3">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/MLecnN5.jpeg" alt="Meme 4">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/aOA6nAu.jpeg" alt="Meme 5">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/Qz6JacQ.jpeg" alt="Meme 6">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/WLkY8EG.jpeg" alt="Meme 7">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/OYbIFy7.jpeg" alt="Meme 8">
+                    </div>
+                    <div class="meme-img-wrapper fade-in">
+                        <img src="https://i.imgur.com/kYrTKo7.jpeg" alt="Meme 9">
+                    </div>                   
+                </div>
+                <p style="margin-top: 30px; color: var(--poster-dark-red);">
+                    Submit your memes to our X for a chance to be featured!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Joe's Bid for Freedom Section -->
+    <section class="freedom" id="freedom">
+        <div class="container">
+            <h2 class="section-title fade-in">Fight for Freedom</h2>
+            <div class="freedom-content fade-in">
+                <p style="font-size: 1.3rem; margin-bottom: 30px;">
+                    Joe Exotic continues his fight for justice from behind bars. Every $TIGERKING holder becomes part of his journey toward freedom and vindication.
+                </p>
+                <p class="freedom-hashtag">#FreeJoeExotic</p>
+                <p style="margin-bottom: 30px; font-size: 1.1rem;">
+                    Join the movement to free an innocent man. Learn the truth about Joe's case and how you can help support his fight for justice.
+                </p>
+                <a href="https://www.joeexoticofficial.com/pages/joeexotictigerkinginnocent" target="_blank" class="freedom-link">
+                    🗽 Learn Joe's Truth & Take Action
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy Section - Now Dark -->
+    <section class="how-to-buy section-dark" id="how-to-buy">
+        <div class="container">
+            <h2 class="section-title fade-in">How to Buy</h2>
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Get $SOL</h3>
+                    <p>Buy Solana on any major exchange</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Go to pump.fun</h3>
+                    <p>Connect your Solana wallet</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Search $TIGERKING</h3>
+                    <p>Find the official Tiger King Coin</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Buy and HODL</h3>
+                    <p>Welcome to the pride!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="contract" onclick="copyContract()">
+                <div class="copy-feedback" id="copyFeedback">Copied!</div>
+                <p class="contract-label">Contract Address (Click to Copy)</p>
+                <p class="contract-address">TigerKingCoinContractAddressHere</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" class="social-link" title="Twitter">𝕏</a>
+                <a href="#" class="social-link" title="Telegram">✈️</a>
+            </div>
+            
+            <p class="disclaimer">
+                Endorsed by Joe Exotic via written approval. Not affiliated with Netflix or other third parties. 
+                For entertainment only. DYOR. Cryptocurrency investments carry risk. Never invest more than you can afford to lose.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Copy contract address
+        function copyContract() {
+            const contractAddress = document.querySelector('.contract-address').textContent;
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                const feedback = document.getElementById('copyFeedback');
+                feedback.classList.add('show');
+                setTimeout(() => {
+                    feedback.classList.remove('show');
+                }, 2000);
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>
+  /* === Mobile nav toggle === */
+  const navToggle = document.getElementById('navToggle');
+  const navMenu   = document.getElementById('navMenu');
+  navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      navToggle.classList.toggle('open');
+  });
+</script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
